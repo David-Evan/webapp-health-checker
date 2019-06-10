@@ -14,4 +14,9 @@ use Illuminate\Database\Eloquent\Model;
 class Healthcheck extends Model
 {
     public $table = 'healthcheck';
+
+    public function healthchecker()
+    {
+        return $this->belongsTo('App\Models\Healthchecker');
+    }
 }

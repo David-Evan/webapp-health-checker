@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::namespace('Front')->group(function () {
+
+    Route::resource('heartbeat', 'HeartbeatController')->only([
+        'index',
+    ]);
+
 });

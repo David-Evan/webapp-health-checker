@@ -14,4 +14,16 @@ use Illuminate\Database\Eloquent\Model;
 class Healthchecker extends Model
 {
     public $table = 'healchecker';
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationship
+    |--------------------------------------------------------------------------
+    */
+
+
+    public function healthchecks()
+    {
+        return $this->hasMany('App\Models\Healthchecks', 'healchecker_id');
+    }
 }
