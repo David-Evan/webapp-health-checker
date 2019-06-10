@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Represent a Heartbeat that'll generated when your webapp hit his listener
+ * Represent a Heartbeat that'll generated when your webapp hit his receptor
  *
  * Class Heartbeat
  * @package App\Models
@@ -13,4 +13,15 @@ use Illuminate\Database\Eloquent\Model;
 class Heartbeat extends Model
 {
     public $table = 'heartbeat';
+
+    /**
+     * -----------------------------------------------
+     *  RELATIONSHIPS
+     * -----------------------------------------------
+     */
+
+    public function receptor()
+    {
+        return $this->belongsTo('App\Models\HeartbeatReceptor');
+    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHeartbeatListenerTable extends Migration
+class CreateHeartbeatReceptorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateHeartbeatListenerTable extends Migration
      */
     public function up()
     {
-        Schema::create('heartbeat_listener', function (Blueprint $table) {
+        Schema::create('heartbeat_receptor', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('uuid', 16)->unique(); // Your UUID key to identify your heartbeat listener
+            $table->string('uuid', 16)->unique(); // Your UUID key to identify your heartbeat receptor
             $table->string('name', 64);
             $table->string('alert_to', 512);
             $table->dateTime('last_checkin');
@@ -32,6 +32,6 @@ class CreateHeartbeatListenerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('heartbeat_listener');
+        Schema::dropIfExists('heartbeat_receptor');
     }
 }

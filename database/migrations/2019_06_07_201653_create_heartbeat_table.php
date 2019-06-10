@@ -15,8 +15,11 @@ class CreateHeartbeatTable extends Migration
     {
         Schema::create('heartbeat', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('heartbeat_listener_id')->references('id')->on('heartbeat_listener')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('heartbeat_receptor_id')->unsigned();
             $table->timestamps();
+
+            // Foreign keys
+            $table->foreign('heartbeat_receptor_id')->references('id')->on('heartbeat_receptor')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

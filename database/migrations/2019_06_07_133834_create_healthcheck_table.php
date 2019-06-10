@@ -16,8 +16,11 @@ class CreateHealthcheckTable extends Migration
         Schema::create('healthcheck', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->smallInteger('http_code')->unsigned();
-            $table->foreign('healthchecker_id')->references('id')->on('healthchecker')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('healthchecker_id')->unsigned();
             $table->timestamps();
+
+            // Foreign keys
+            $table->foreign('healthchecker_id')->references('id')->on('healthchecker')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
