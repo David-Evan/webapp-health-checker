@@ -49,7 +49,7 @@
 
         {{-- CONTAINER - Contient la structure commune des pages --}}
             <div class="container">
-                @include('menu')
+                @include('includes.menu')
 
                 @yield('main')
             </div>
