@@ -1,0 +1,118 @@
+
+// * BOOTSTRAP 3 MAGIN PADDING TO BOOTSTRAP 4
+// *
+// * @author David EVAN
+// * @source http://github.com/David-Evan/bs3-mar-pad-to-bs4
+// * @copyright LICENCE M.I.T
+// *
+// * This file add BS 3 margin style (px) into BS 4 (which is based on screen size.)
+//
+// -------------------------------------
+// BOOTSTRAP EXTENSION
+// -------------------------------------
+//
+// This file add BS 3 margin style (px) into BS 4 (which is based on screen size.)
+// -------------------------------------
+
+// ---------------------------
+// MARGIN
+// ---------------------------
+
+// MARGIN-TOP
+.mt-10px{margin-top: 10px;}
+.mt-15px{margin-top: 15px;}
+.mt-20px{margin-top: 20px;}
+.mt-25px{margin-top: 25px;}
+.mt-30px{margin-top: 30px;}
+.mt-40px{margin-top: 40px;}
+.mt-50px{margin-top: 50px;}
+
+// MARGIN-BOTTOM
+.mb-10px{margin-bottom: 10px;}
+.mb-15px{margin-bottom: 15px;}
+.mb-20px{margin-bottom: 20px;}
+.mb-25px{margin-bottom: 25px;}
+.mb-30px{margin-bottom: 30px;}
+.mb-40px{margin-bottom: 40px;}
+.mb-50px{margin-bottom: 50px;}
+
+// MARGIN-RIGHT
+.mr-10px{margin-right: 10px;}
+.mr-15px{margin-right: 15px;}
+.mr-20px{margin-right: 20px;}
+.mr-25px{margin-right: 25px;}
+.mr-30px{margin-right: 30px;}
+.mr-40px{margin-right: 40px;}
+.mr-50px{margin-right: 50px;}
+
+// MARGIN-LEFT
+.ml-10px{margin-left: 10px;}
+.ml-15px{margin-left: 15px;}
+.ml-20px{margin-left: 20px;}
+.ml-25px{margin-left: 25px;}
+.ml-30px{margin-left: 30px;}
+.ml-40px{margin-left: 40px;}
+.ml-50px{margin-left: 50px;}
+
+// MARGIN-LATERALS (LEFT AND RIGHT)
+.m-lat-25px {margin-left: 25px; margin-right: 25px;}
+.m-lat-50px {margin-left: 50px; margin-right: 50px;}
+.m-lat-75px {margin-left: 75px; margin-right: 75px;}
+
+// MARGIN VERTICAL (TOP AND BOTTOM)
+.m-ver-25px {margin-top: 25px; margin-bottom: 25px;}
+.m-ver-50px {margin-top: 50px; margin-bottom: 50px;}
+.m-ver-75px {margin-top: 75px; margin-bottom: 75px;}
+
+// ---------------------------
+// PADDING
+// ---------------------------
+
+// PADDING-TOP
+.pt-10px{padding-top: 10px;}
+.pt-15px{padding-top: 15px;}
+.pt-20px{padding-top: 20px;}
+.pt-25px{padding-top: 25px;}
+.pt-30px{padding-top: 30px;}
+.pt-40px{padding-top: 40px;}
+.pt-50px{padding-top: 50px;}
+
+// PADDING-BOTTOM
+.pb-10px{padding-bottom: 10px;}
+.pb-15px{padding-bottom: 15px;}
+.pb-20px{padding-bottom: 20px;}
+.pb-25px{padding-bottom: 25px;}
+.pb-30px{padding-bottom: 30px;}
+.pb-40px{padding-bottom: 40px;}
+.pb-50px{padding-bottom: 50px;}
+
+// PADDING-RIGHT
+.pr-10px{padding-right: 10px;}
+.pr-15px{padding-right: 15px;}
+.pr-20px{padding-right: 20px;}
+.pr-25px{padding-right: 25px;}
+.pr-30px{padding-right: 30px;}
+.pr-40px{padding-right: 40px;}
+.pr-50px{padding-right: 50px;}
+
+// PADDING-LEFT
+.pl-10px{padding-left: 10px;}
+.pl-15px{padding-left: 15px;}
+.pl-20px{padding-left: 20px;}
+.pl-25px{padding-left: 25px;}
+.pl-30px{padding-left: 30px;}
+.pl-40px{padding-left: 40px;}
+.pl-50px{padding-left: 50px;}
+
+// PADDING LATERALS (LEFT AND RIGHT)
+.p-lat-25px {padding-left: 25px; padding-right: 25px;}
+.p-lat-50px {padding-left: 50px; padding-right: 50px;}
+.p-lat-75px {padding-left: 75px; padding-right: 75px;}
+
+// PADDING VERTICAL (TOP AND BOTTOM)
+.p-ver-25px {padding-top: 25px; padding-bottom: 25px;}
+.p-ver-50px {padding-top: 50px; padding-bottom: 50px;}
+.p-ver-75px {padding-top: 75px; padding-bottom: 75px;}
+
+.no-padding{padding: 0;}
+.no-margin{margin: 0;}

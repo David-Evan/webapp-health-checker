@@ -1,0 +1,55 @@
+// ----------------------------
+// @Creator : David EVAN (DEN)
+// @Sources : %root_project%/ressources/assets/sass
+//
+// /!\ Ce fichier est une surcharge de bootstrap 4.3.0 & Fontawesome 5.8.1
+// @use : https://use.fontawesome.com/releases/v5.8.1/css/all.css
+// @use : https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+//
+// This files structure is a common implementation of "SMACC" CSS
+//----------------------------
+
+//----------------------------
+//  VENDORS
+//----------------------------
+
+//----------------------------
+//    BOOTSTRAP OVERIDE / EXTENSION
+//----------------------------
+
+@import "base/bootstrap_extension";
+
+//----------------------------
+//   VAR - MIXIN FONTS
+//----------------------------
+
+@import 'base/mixin';           // Mixins
+
+@import 'base/variables';     // Vars
+@import 'base/fonts';            // Font to use in your app
+
+//----------------------------
+//   BASE
+//----------------------------
+
+@import 'base/base';            // Component style base
+
+//----------------------------
+//   LAYOUT
+//----------------------------
+
+@import 'layout/grid';
+
+//----------------------------
+//   MODULES
+//----------------------------
+
+@import 'modules/checkbox'; // Défini le style des "checkbox"
+
+//----------------------------
+//   RESPONSIVE
+//----------------------------
+
+//----------------------------
+//   EVENTS
+//----------------------------

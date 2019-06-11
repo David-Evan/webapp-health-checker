@@ -1,0 +1,28 @@
+
+/** HEADER **/
+
+.navbar img{
+    max-height: 60px;
+}
+
+img.sm-logo{
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.role-delete{
+    position: absolute;
+    z-index: 100;
+    margin-top: -40px;
+    right: 50px;
+}
+
+
+.display-cols-2{
+    column-count:2;
+}
+
+.list-in-card{
+    margin-bottom: 30px;
+    display: inline-block
+}

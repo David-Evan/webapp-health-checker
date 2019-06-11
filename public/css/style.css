@@ -1,0 +1,414 @@
+.mt-10px {
+  margin-top: 10px;
+}
+
+.mt-15px {
+  margin-top: 15px;
+}
+
+.mt-20px {
+  margin-top: 20px;
+}
+
+.mt-25px {
+  margin-top: 25px;
+}
+
+.mt-30px {
+  margin-top: 30px;
+}
+
+.mt-40px {
+  margin-top: 40px;
+}
+
+.mt-50px {
+  margin-top: 50px;
+}
+
+.mb-10px {
+  margin-bottom: 10px;
+}
+
+.mb-15px {
+  margin-bottom: 15px;
+}
+
+.mb-20px {
+  margin-bottom: 20px;
+}
+
+.mb-25px {
+  margin-bottom: 25px;
+}
+
+.mb-30px {
+  margin-bottom: 30px;
+}
+
+.mb-40px {
+  margin-bottom: 40px;
+}
+
+.mb-50px {
+  margin-bottom: 50px;
+}
+
+.mr-10px {
+  margin-right: 10px;
+}
+
+.mr-15px {
+  margin-right: 15px;
+}
+
+.mr-20px {
+  margin-right: 20px;
+}
+
+.mr-25px {
+  margin-right: 25px;
+}
+
+.mr-30px {
+  margin-right: 30px;
+}
+
+.mr-40px {
+  margin-right: 40px;
+}
+
+.mr-50px {
+  margin-right: 50px;
+}
+
+.ml-10px {
+  margin-left: 10px;
+}
+
+.ml-15px {
+  margin-left: 15px;
+}
+
+.ml-20px {
+  margin-left: 20px;
+}
+
+.ml-25px {
+  margin-left: 25px;
+}
+
+.ml-30px {
+  margin-left: 30px;
+}
+
+.ml-40px {
+  margin-left: 40px;
+}
+
+.ml-50px {
+  margin-left: 50px;
+}
+
+.m-lat-25px {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.m-lat-50px {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.m-lat-75px {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.m-ver-25px {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.m-ver-50px {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.m-ver-75px {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.pt-10px {
+  padding-top: 10px;
+}
+
+.pt-15px {
+  padding-top: 15px;
+}
+
+.pt-20px {
+  padding-top: 20px;
+}
+
+.pt-25px {
+  padding-top: 25px;
+}
+
+.pt-30px {
+  padding-top: 30px;
+}
+
+.pt-40px {
+  padding-top: 40px;
+}
+
+.pt-50px {
+  padding-top: 50px;
+}
+
+.pb-10px {
+  padding-bottom: 10px;
+}
+
+.pb-15px {
+  padding-bottom: 15px;
+}
+
+.pb-20px {
+  padding-bottom: 20px;
+}
+
+.pb-25px {
+  padding-bottom: 25px;
+}
+
+.pb-30px {
+  padding-bottom: 30px;
+}
+
+.pb-40px {
+  padding-bottom: 40px;
+}
+
+.pb-50px {
+  padding-bottom: 50px;
+}
+
+.pr-10px {
+  padding-right: 10px;
+}
+
+.pr-15px {
+  padding-right: 15px;
+}
+
+.pr-20px {
+  padding-right: 20px;
+}
+
+.pr-25px {
+  padding-right: 25px;
+}
+
+.pr-30px {
+  padding-right: 30px;
+}
+
+.pr-40px {
+  padding-right: 40px;
+}
+
+.pr-50px {
+  padding-right: 50px;
+}
+
+.pl-10px {
+  padding-left: 10px;
+}
+
+.pl-15px {
+  padding-left: 15px;
+}
+
+.pl-20px {
+  padding-left: 20px;
+}
+
+.pl-25px {
+  padding-left: 25px;
+}
+
+.pl-30px {
+  padding-left: 30px;
+}
+
+.pl-40px {
+  padding-left: 40px;
+}
+
+.pl-50px {
+  padding-left: 50px;
+}
+
+.p-lat-25px {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.p-lat-50px {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.p-lat-75px {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.p-ver-25px {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.p-ver-50px {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.p-ver-75px {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+/** HEADER **/
+.navbar img {
+  max-height: 60px;
+}
+
+img.sm-logo {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.role-delete {
+  position: absolute;
+  z-index: 100;
+  margin-top: -40px;
+  right: 50px;
+}
+
+.display-cols-2 {
+  column-count: 2;
+}
+
+.list-in-card {
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.label_container_radio,
+.label_container_checkbox {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 8px;
+  flex-basics: auto;
+}
+
+/* Hide the browser's default radio button */
+.label_container_radio input,
+.label_container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark_radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: solid 1px lightgrey;
+  border-radius: 50%;
+}
+
+.checkmark_checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: solid 1px lightgrey;
+}
+
+.checkmark_label {
+  margin-left: 15px;
+}
+
+/* On mouse-over, add a grey background color */
+.label_container_radio:hover input ~ .checkmark_radio,
+.label_container_checkbox:hover input ~ .checkmark_checkbox {
+  background-color: #a6b8c2;
+}
+
+/* When the radio button is checked, add a blue background */
+.label_container_radio input:checked ~ .checkmark_radio,
+.label_container_checkbox input:checked ~ .checkmark_checkbox {
+  background-color: white;
+}
+
+.label_container_radio input:checked ~ .checkmark_radio:after,
+.label_container_checkbox input:checked ~ .checkmark_checkbox:after {
+  display: block;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark_radio:after,
+.checkmark_checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Style the indicator (dot/circle) */
+.label_container_radio .checkmark_radio:after {
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #87c8b4;
+}
+
+.label_container_checkbox .checkmark_checkbox:after {
+  left: 5px;
+  top: -6px;
+  width: 12px;
+  height: 23px;
+  border: solid #87c8b4;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Fin Radio/Checkbox*/
+/******************************************************************************/
