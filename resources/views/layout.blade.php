@@ -25,10 +25,6 @@
     </head>
     <body>
         <div id="app">
-
-            {{-- HEADER  --}}
-            @include('header')
-
             {{-- ALERT COMPONENT --}}
             @if(Session::has('alert'))
                 @component('components.alert', ['type' => session('alert.type')])

@@ -11,9 +11,13 @@
 |
 */
 
+// HOME PAGE
+Route::get('/', function (){ return view('pages.index'); });
 
+/**
+ * FRONT CONTROLLERS
+ */
 Route::namespace('Front')->group(function () {
-
     Route::resource('heartbeat', 'HeartbeatController')->only([
         'index',
     ]);
