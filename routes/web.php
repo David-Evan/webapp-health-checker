@@ -12,7 +12,8 @@
 */
 
 // HOME PAGE
-Route::get('/', function (){ return view('pages.index'); });
+Route::get('/', function (){ return view('pages.index'); })->name('home');
+Route::get('/home', function (){ return redirect(route('home')); });
 
 /**
  * FRONT CONTROLLERS

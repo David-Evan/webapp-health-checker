@@ -4,7 +4,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" type="image/png" href="{{ asset('imgs/favicon.ico') }}">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -17,6 +17,10 @@
         <!-- DATATABLE CSS-->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
         --}}
+
+    <!-- BOOTSTRAP DARK -->
+        <link href="{{ asset('css/themes/bootstrap_dark.css') }}" rel="stylesheet">
+
         <!-- CUSTOM CSS -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         @yield('css')
@@ -25,6 +29,9 @@
     </head>
     <body>
         <div id="app">
+            <?php
+
+            ?>
             {{-- ALERT COMPONENT --}}
             @if(Session::has('alert'))
                 @component('components.alert', ['type' => session('alert.type')])
