@@ -43,11 +43,15 @@
                 @endcomponent
             @endif
 
-        {{-- CONTAINER - Contient la structure commune des pages --}}
-            <div class="container">
-                @include('includes.menu')
+            {{-- HEADER --}}
+            @include('includes.header')
 
+            {{-- CONTAINER --}}
+            <div class="container">
                 @yield('main')
+
+                {{-- FOOTER --}}
+                @include('includes.footer')
             </div>
         </div>
         <!-- Optional JavaScript -->
