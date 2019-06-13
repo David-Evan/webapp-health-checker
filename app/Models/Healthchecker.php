@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Base\UuidModel;
 
 /**
  * Represent a Healchecker, that you can create to frequently check your
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class HealthcheckerListener
  * @package App\Models
  */
-class Healthchecker extends Model
+class Healthchecker extends UuidModel
 {
     public $table = 'healchecker';
 

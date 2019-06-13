@@ -14,7 +14,7 @@ class CreateHeartbeatTable extends Migration
     public function up()
     {
         Schema::create('heartbeat', function (Blueprint $table) {
-            $table->uuid('id')->unique();
+            $table->uuid('id')->primary()->unique();
             $table->integer('heartbeat_receptor_id')->unsigned(); // Foreign key
             $table->timestamp('createdAt');
 

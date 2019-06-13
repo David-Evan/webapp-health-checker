@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Base\UuidModel;
 
 /**
  * Represent a Healcheck, that'll be generated when WHC call your
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Healthchecker
  * @package App\Models
  */
-class Healthcheck extends Model
+class Healthcheck extends UuidModel
 {
     public $table = 'healthcheck';
 

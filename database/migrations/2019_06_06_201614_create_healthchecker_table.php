@@ -14,7 +14,7 @@ class CreateHealthcheckerTable extends Migration
     public function up()
     {
         Schema::create('healthchecker', function (Blueprint $table) {
-            $table->uuid('id')->unique();
+            $table->uuid('id');
             $table->string('name', 64);
             $table->string('checkURL',256);
             $table->string('alertTo', 512)->nullable();

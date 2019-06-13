@@ -14,7 +14,7 @@ class CreateHealthcheckTable extends Migration
     public function up()
     {
         Schema::create('healthcheck', function (Blueprint $table) {
-            $table->uuid('id')->unique();
+            $table->uuid('id')->primary()->unique();
             $table->smallInteger('HTTPCode')->unsigned();
             $table->integer('healthchecker_id')->unsigned(); //Foreign key
             $table->timestamp('createdAt');

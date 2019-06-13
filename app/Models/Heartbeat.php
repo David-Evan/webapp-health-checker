@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Base\UuidModel;
 
 /**
  * Represent a Heartbeat that'll generated when your webapp hit his receptor
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Heartbeat
  * @package App\Models
  */
-class Heartbeat extends Model
+class Heartbeat extends UuidModel
 {
     public $table = 'heartbeat';
 
