@@ -16,11 +16,12 @@ class CreateHeartbeatReceptorTable extends Migration
         Schema::create('heartbeat_receptor', function (Blueprint $table) {
             $table->uuid('id')->unique(); // Your UUID key to identify your heartbeat receptor
             $table->string('name', 64);
-            $table->string('alert_to', 512)->nullable();
-            $table->dateTime('last_checkin')->nullable();
-            $table->integer('warning_after')->default(60);
-            $table->boolean('is_active')->default(true);
-            $table->timestamps();
+            $table->string('alertTo', 512)->nullable();
+            $table->dateTime('lastCheckin')->nullable();
+            $table->integer('warningAfter')->default(60);
+            $table->boolean('isActive')->default(true);
+            $table->timestamp('createdAt');
+            $table->timestamp('updatedAt')->nullable();
         });
     }
 

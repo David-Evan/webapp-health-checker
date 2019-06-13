@@ -14,12 +14,12 @@ class CreateHealthcheckTable extends Migration
     public function up()
     {
         Schema::create('healthcheck', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->smallInteger('http_code')->unsigned();
-            $table->integer('healthchecker_id')->unsigned();
-            $table->timestamps();
+            $table->uuid('id')->unique();
+            $table->smallInteger('HTTPCode')->unsigned();
+            $table->integer('healthchecker_id')->unsigned(); //Foreign key
+            $table->timestamp('createdAt');
 
-            // Foreign keys
+            // Foreign keys definitions
             $table->foreign('healthchecker_id')->references('id')->on('healthchecker')->onDelete('cascade')->onUpdate('cascade');
         });
     }

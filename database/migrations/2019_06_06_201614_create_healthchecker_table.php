@@ -14,15 +14,16 @@ class CreateHealthcheckerTable extends Migration
     public function up()
     {
         Schema::create('healthchecker', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->uuid('id')->unique();
             $table->string('name', 64);
-            $table->string('check_url',256);
-            $table->string('alert_to', 512)->nullable();
-            $table->dateTime('last_check');
-            $table->integer('warning_after')->default(60);
-            $table->boolean('is_reported')->default(false);
-            $table->boolean('is_active')->default(true);
-            $table->timestamps();
+            $table->string('checkURL',256);
+            $table->string('alertTo', 512)->nullable();
+            $table->dateTime('lastCheck');
+            $table->integer('warningAfter')->default(60);
+            $table->boolean('isReported')->default(false);
+            $table->boolean('isActive')->default(true);
+            $table->timestamp('createdAt');
+            $table->timestamp('updatedAt')->nullable();
         });
     }
 
