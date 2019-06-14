@@ -18,8 +18,9 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
         --}}
 
-    <!-- BOOTSTRAP DARK -->
+        <!-- BOOTSTRAP DARK
         <link href="{{ asset('css/themes/bootstrap_dark.css') }}" rel="stylesheet">
+        -->
 
         <!-- CUSTOM CSS -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
