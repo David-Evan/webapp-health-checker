@@ -23,7 +23,7 @@ class HeartbeatReceptor extends ApiRequest
     {
         return  [
             'name' => 'required|max:128',
-            'alertTo' => 'sometimes|required|email',
+            'alertTo' => 'sometimes|nullable|email',
             'warningAfter' => 'nullable|int',
         ];
     }
