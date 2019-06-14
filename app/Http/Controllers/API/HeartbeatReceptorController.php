@@ -5,7 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\ApiController;
 use App\Models\HeartbeatReceptor;
 use App\Http\Requests\HeartbeatReceptor as HeartbeatReceptorRequest;
-use Illuminate\Http\JsonResponse;
+use App\Http\Resources\HeartbeatReceptor as HeartbeatReceptorResource;
 use Illuminate\Http\Request;
 
 class HeartbeatReceptorController extends ApiController
@@ -13,12 +13,10 @@ class HeartbeatReceptorController extends ApiController
     /**
      * @GET : api/heartbeats/
      * Display a listing of the resource.
-     *
-     * @return JsonResponse
      */
-    public function index() : jsonResponse
+    public function index()
     {
-        return response()->json(HeartbeatReceptor::get(), 200);
+        return HeartbeatReceptorResource::collection(HeartbeatReceptor::all());
     }
 
     /**
@@ -26,11 +24,11 @@ class HeartbeatReceptorController extends ApiController
      * Store a newly created resource in storage.
      *
      * @param  HeartbeatReceptorRequest $request
-     * @return JsonResponse - new created Heartbeat Receptor
+     * @return HeartbeatReceptorResource - New stored Heartbeat Receptor
      */
-    public function store(HeartbeatReceptorRequest $request) : JsonResponse
+    public function store(HeartbeatReceptorRequest $request)
     {
-        return response()->json(HeartbeatReceptor::create($request->all()), 200);
+        return new HeartbeatReceptorResource(HeartbeatReceptor::create($request->all()));
     }
 
     /**
@@ -38,24 +36,25 @@ class HeartbeatReceptorController extends ApiController
      * Display the specified resource.
      *
      * @param HeartbeatReceptor  $heartbeatReceptor
-     * @return JsonResponse
+     * @return HeartbeatReceptorResource - Specified Heartbeat Receptor
      */
-    public function show(HeartbeatReceptor $heartbeatReceptor) : JsonResponse
+    public function show(HeartbeatReceptor $heartbeatReceptor)
     {
-        //
+        return new HeartbeatReceptorResource($heartbeatReceptor);
     }
 
     /**
      * @PUT : api/heartbeats/{heartbeat}
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  HeartbeatReceptorRequest  $request
      * @param HeartbeatReceptor  $heartbeatReceptor
-     * @return JsonResponse
+     * @return HeartbeatReceptorResource - Updated Heartbeat Receptor
      */
-    public function update(Request $request, HeartbeatReceptor $heartbeatReceptor) : JsonResponse
+    public function update(HeartbeatReceptorRequest $request, HeartbeatReceptor $heartbeatReceptor)
     {
-        //
+        $heartbeatReceptor->update($request->all());
+        return new HeartbeatReceptorResource($heartbeatReceptor);
     }
 
     /**
@@ -63,10 +62,13 @@ class HeartbeatReceptorController extends ApiController
      * Remove the specified resource from storage.
      *
      * @param HeartbeatReceptor  $heartbeatReceptor
-     * @return JsonResponse
+     * @return HeartbeatReceptorResource - Deleted Heartbeat Receptor
+     *
+     * @throws \Exception
      */
-    public function destroy(HeartbeatReceptor $heartbeatReceptor) : JsonResponse
+    public function destroy(HeartbeatReceptor $heartbeatReceptor)
     {
-        //
+        $heartbeatReceptor->delete();
+        return new HeartbeatReceptorResource($heartbeatReceptor);
     }
 }
