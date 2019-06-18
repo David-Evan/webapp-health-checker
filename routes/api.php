@@ -16,6 +16,14 @@ use Illuminate\Http\Request;
 // BE CARREFUL : All controller of this files are placed into :  Controller/API
 // namespace. It's possible to update this value by update RouteServiceProvider
 
+// ALL APIResources
 Route::apiResources([
         'heartbeat-receptors' => 'HeartbeatReceptorController'
+    ],
+    // Prefix for all routes to avoid conflict with frontend routes
+    [
+        'as' => 'api'
     ]);
+
+// Heartbeat Receptor listener
+Route::post('heartbeat-receptor/{heartbeat_receptor}/hit', 'HeartbeatReceptorController@hit')->name('api.heartbeat-receptors.hit');

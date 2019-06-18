@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class ApiController extends Controller
+abstract class ApiController extends Controller
 {
     public function __construct()
     {
