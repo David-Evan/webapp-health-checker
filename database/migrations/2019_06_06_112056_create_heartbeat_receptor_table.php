@@ -15,6 +15,8 @@ class CreateHeartbeatReceptorTable extends Migration
     public function up()
     {
         Schema::create('heartbeat_receptor', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->uuid('id')->primary()->unique(); // Your UUID key to identify your heartbeat receptor
             $table->string('name', 128);
             $table->string('alertTo', 256)->nullable();

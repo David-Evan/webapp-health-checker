@@ -33,10 +33,6 @@ class HeartbeatReceptor extends UuidModel
         'isActive' => true,
     ];
 
-
-
-
-
     /*
     |--------------------------------------------------------------------------
     | Relationship
@@ -45,7 +41,7 @@ class HeartbeatReceptor extends UuidModel
 
     public function heartbeats() : HasMany
     {
-        return $this->hasMany('App\Models\Heartbeat', 'heartbeat_receptor_id');
+        return $this->hasMany('App\Models\Heartbeat', 'heartbeatReceptorId');
     }
 
 

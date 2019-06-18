@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\ApiController;
+use App\Http\Resources\Heartbeat as HeartbeatResource;
 use App\Models\HeartbeatReceptor;
 use App\Http\Requests\API\HeartbeatReceptor as HeartbeatReceptorRequest;
 use App\Http\Resources\HeartbeatReceptor as HeartbeatReceptorResource;
@@ -76,11 +77,11 @@ class HeartbeatReceptorController extends ApiController
      * Create a new Heartbeat when Receptor is "hitted".
      *
      * @param HeartbeatReceptor $heartbeatReceptor
-     * @return HeartbeatReceptorResource - Heartbeat Receptor with his last heartbeats
+     * @return HeartbeatResource - Heartbeat Resource created
      */
     public function hit(HeartbeatReceptor $heartbeatReceptor)
     {
-        $heartbeatReceptor->heartbeats()->create();
-        return new HeartbeatReceptorResource($heartbeatReceptor);
+        $heartbeat = $heartbeatReceptor->heartbeats()->create();
+        return new HeartbeatResource($heartbeat);
     }
 }

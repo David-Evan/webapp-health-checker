@@ -13,7 +13,26 @@ use App\Models\Base\UuidModel;
  */
 class Healthchecker extends UuidModel
 {
-    public $table = 'healchecker';
+    // Params - Default values
+    const _WARING_AFTER = 60;
+
+    // Table name
+    public $table = 'healthchecker';
+
+    // Fillables fields
+    protected $fillable = ['name', 'checkURL', 'alertTo','warningAfter'];
+
+    // Default values for attributes
+    protected $attributes = [
+        'id' => null,
+        'name' => null,
+        'checkURL' => null,
+        'alertTo' => null,
+        'lastCheck' => null,
+        'warningAfter' => self::_WARING_AFTER,
+        'isReported' => true,
+        'isActive' => true,
+    ];
 
     /*
     |--------------------------------------------------------------------------
@@ -24,6 +43,6 @@ class Healthchecker extends UuidModel
 
     public function healthchecks()
     {
-        return $this->hasMany('App\Models\Healthchecks', 'healchecker_id');
+        return $this->hasMany('App\Models\Healthchecks', 'healcheckerId');
     }
 }

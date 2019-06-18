@@ -14,12 +14,14 @@ class CreateHeartbeatTable extends Migration
     public function up()
     {
         Schema::create('heartbeat', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->uuid('id')->primary()->unique();
-            $table->integer('heartbeat_receptor_id')->unsigned(); // Foreign key
+            $table->uuid('heartbeatReceptorId'); // Foreign key
             $table->timestamp('createdAt');
 
             // Foreign keys definitions
-            $table->foreign('heartbeat_receptor_id')->references('id')->on('heartbeat_receptor')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('heartbeatReceptorId')->references('id')->on('heartbeat_receptor')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

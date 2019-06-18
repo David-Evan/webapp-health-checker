@@ -12,6 +12,9 @@ use App\Models\Base\UuidModel;
  */
 class Heartbeat extends UuidModel
 {
+    // Disabled update_at field
+    const UPDATED_AT = null;
+
     public $table = 'heartbeat';
 
     /*

@@ -13,6 +13,9 @@ use App\Models\Base\UuidModel;
  */
 class Healthcheck extends UuidModel
 {
+    // Disabled update_at field
+    const UPDATED_AT = null;
+
     public $table = 'healthcheck';
 
     public function healthchecker()
