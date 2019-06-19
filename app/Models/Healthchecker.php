@@ -43,6 +43,6 @@ class Healthchecker extends UuidModel
 
     public function healthchecks()
     {
-        return $this->hasMany('App\Models\Healthchecks', 'healcheckerId');
+        return $this->hasMany('App\Models\Healthcheck', 'healthcheckerId');
     }
 }

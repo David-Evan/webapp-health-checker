@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,10 +40,19 @@ Route::apiResource( 'heartbeats', 'HeartbeatController',
     ]);
 
 /**
- * Healthchecker
+ * Healthchecker - Be carreful to not confuse Healthcheck and HealcheckER
  */
 
 Route::apiResource( 'healthcheckers', 'HealthcheckerController',
     [
         'as' => 'api',
+    ]);
+
+/**
+ * Healthcheck - Be carreful to not confuse Healthcheck and HealcheckER
+ */
+Route::apiResource( 'healthchecks', 'HealthcheckController',
+    [
+        'as' => 'api',
+        'only' => ['index', 'show']
     ]);

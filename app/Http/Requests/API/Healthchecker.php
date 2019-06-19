@@ -23,7 +23,7 @@ class Healthchecker extends ApiRequest
     {
         return  [
             'name' => 'required|max:128',
-            'checkURL' => 'required|max:256',
+            'checkURL' => 'required|url|max:256',
             'alertTo' => 'sometimes|nullable|email',
             'warningAfter' => 'nullable|int',
         ];

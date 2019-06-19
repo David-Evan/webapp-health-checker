@@ -20,7 +20,7 @@ class CreateHealthcheckerTable extends Migration
             $table->string('name', 64);
             $table->string('checkURL',256);
             $table->string('alertTo', 512)->nullable();
-            $table->dateTime('lastCheck');
+            $table->dateTime('lastCheck')->nullable();
             $table->integer('warningAfter')->default(60);
             $table->boolean('isReported')->default(false);
             $table->boolean('isActive')->default(true);
