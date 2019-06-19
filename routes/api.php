@@ -48,6 +48,9 @@ Route::apiResource( 'healthcheckers', 'HealthcheckerController',
         'as' => 'api',
     ]);
 
+// Heartbeat Receptor listener
+Route::get('healthcheckers/{healthchecker}/check', 'healthcheckerController@check')->name('api.healthchecker.check');
+
 /**
  * Healthcheck - Be carreful to not confuse Healthcheck and HealcheckER
  */

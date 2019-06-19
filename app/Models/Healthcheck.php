@@ -16,6 +16,9 @@ class Healthcheck extends UuidModel
     // Disabled update_at field
     const UPDATED_AT = null;
 
+    // Fillables fields
+    protected $fillable = ['HTTPCode'];
+
     public $table = 'healthcheck';
 
     public function healthchecker()

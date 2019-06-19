@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\ApiController;
+use App\Http\Resources\Healthcheck as HealthcheckResource;
 use App\Models\Healthchecker;
 use App\Http\Requests\API\Healthchecker as HealthcheckerRequest;
 use App\Http\Resources\Healthchecker as HealthcheckerResource;
+use GuzzleHttp\Client;
 
 class HealthcheckerController extends ApiController
 {
@@ -31,7 +33,7 @@ class HealthcheckerController extends ApiController
     }
 
     /**
-     * @GET : api/healthcheckers/{heartbeat_receptor}
+     * @GET : api/healthcheckers/{healthchecker}
      * Display the specified resource.
      *
      * @param Healthchecker $healthchecker
@@ -43,7 +45,7 @@ class HealthcheckerController extends ApiController
     }
 
     /**
-     * @PUT : api/healthcheckers/{heartbeat_receptor}
+     * @PUT : api/healthcheckers/{healthchecker}
      * Update the specified resource in storage.
      *
      * @param HealthcheckerRequest $request
@@ -71,4 +73,22 @@ class HealthcheckerController extends ApiController
         return new HealthcheckerResource($healthchecker);
     }
 
+    /**
+     * @GET : api/healthcheckers/{healthchecker}
+     * Process checking an url.
+     *
+     * @param Healthchecker $healthchecker
+     * @return HealthcheckResource - Result Healthcheck
+     */
+    public function check(Healthchecker $healthchecker)
+    {
+        $HTTPClient = new Client();
+        $response = $HTTPClient->get($healthchecker->checkURL, ['http_errors' => false]);
+
+        $healthcheck = $healthchecker->healthchecks()->create([
+            'HTTPCode' => $response->getStatusCode()
+        ]);
+
+        return new HealthcheckResource($healthcheck);
+    }
 }
