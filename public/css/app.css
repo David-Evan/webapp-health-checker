@@ -291,6 +291,7 @@
 }
 
 /** HEADER **/
+
 .navbar img {
   max-height: 60px;
 }
@@ -308,7 +309,9 @@ img.sm-logo {
 }
 
 .display-cols-2 {
-  column-count: 2;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
 }
 
 .list-in-card {
@@ -332,6 +335,7 @@ img.sm-logo {
 }
 
 /* Hide the browser's default radio button */
+
 .label_container_radio input,
 .label_container_checkbox input {
   position: absolute;
@@ -340,6 +344,7 @@ img.sm-logo {
 }
 
 /* Create a custom radio button */
+
 .checkmark_radio {
   position: absolute;
   top: 0;
@@ -364,12 +369,14 @@ img.sm-logo {
 }
 
 /* On mouse-over, add a grey background color */
+
 .label_container_radio:hover input ~ .checkmark_radio,
 .label_container_checkbox:hover input ~ .checkmark_checkbox {
   background-color: #a6b8c2;
 }
 
 /* When the radio button is checked, add a blue background */
+
 .label_container_radio input:checked ~ .checkmark_radio,
 .label_container_checkbox input:checked ~ .checkmark_checkbox {
   background-color: white;
@@ -381,6 +388,7 @@ img.sm-logo {
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
+
 .checkmark_radio:after,
 .checkmark_checkbox:after {
   content: "";
@@ -389,6 +397,7 @@ img.sm-logo {
 }
 
 /* Style the indicator (dot/circle) */
+
 .label_container_radio .checkmark_radio:after {
   top: 2px;
   left: 2px;
@@ -406,9 +415,10 @@ img.sm-logo {
   border: solid #87c8b4;
   border-width: 0 4px 4px 0;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 /* Fin Radio/Checkbox*/
+
 /******************************************************************************/
+
