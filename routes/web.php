@@ -12,6 +12,6 @@
 */
 
 // HOME PAGE
-Route::get('/', function (){ return view('app'); })->name('home');
+Route::get('/', function (){ return view('pages.index'); })->name('home');
 
 Route::get('/home', function (){ return redirect(route('home')); });
